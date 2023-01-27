@@ -51,3 +51,7 @@ for j in range(epocas):
     pesosNovo1 = camadaOcultaTransposta.dot(deltaSaida)
     pesos1 = (pesos1 * momento) + (pesosNovo1 * taxaAprendizagem)
     
+    camadaEntradaTransposta = camadaEntrada.T
+    pesosNovo0 = camadaEntradaTransposta.dot(deltaCamadaOculta)
+    pesos0 = (pesos0 * momento) + (pesosNovo0 * taxaAprendizagem)
+    
